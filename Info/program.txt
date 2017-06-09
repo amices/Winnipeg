@@ -1,0 +1,36 @@
+Handling Missing Data in R with MICE
+
+45th Annual Meeting of the Statistical Society of Canada
+Biostatistics Workshop
+
+Date: Sunday, June 11, 2017, Winnipeg
+Location: E3 - 270 (EITC)
+
+Program
+
+09.00 - 09.15 L Overview
+ 
+Session I: Introduction, issues raised by missing data, and towards a systematic approach
+09.15 - 10.00 L Introduction to missing data
+10.00 - 10.30 P Ad hoc methods + MICE
+
+10.30 - 10.45 PAUSE
+
+Session II: Introduction to multiple imputation
+10.45 - 11.30 L Multiple imputation
+11.30 - 12.00 P Boys data
+
+12.00 - 13.15 PAUSE
+
+Session III: Multivariate missing data (joint model approach, chained equations)
+13.15 - 14.00 L Generating plausible imputations
+14.00 - 14.30 P Algorithmic convergence and inference pooling
+
+14.30 - 14.45 PAUSE
+
+Session IV: Imputation in practice (large data sets, hierarchical data, non-linearities, interactions)
+14.45 - 15.15 L Imputation in practice
+15.15 - 15.45 P Post-processing and passive imputation
+
+Session V: After imputation, guidelines for analysis and reporting
+15.45 - 16.00 L Guidelines for reporting

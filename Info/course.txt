@@ -1,0 +1,51 @@
+Winnipeg workshop
+
+Title: Handling Missing Data in R with MICE
+
+
+Objective
+
+Nearly all data analytic procedures in R are designed for complete data, and many will fail if the data contain missing values. Typically, procedures simply ignore any incomplete rows in the data, or use ad-hoc procedures like replacing missing values with some sort of "best value". However, such fixes may introduce biases in the ensuing statistical analysis.
+
+Multiple imputation is a principled solution for this problem. The aim of this workshop is to enable participants to perform and evaluate multiple imputation using the R package mice.
+
+
+Contents
+
+The workshop will consist of 5 sessions, each of which comprises a lecture followed by a computer practical using R:
+Session I: Introduction, issues raised by missing data, and towards a systematic approach
+Session II: Introduction to multiple imputation
+Session III: Multivariate missing data (joint model approach, chained equations)
+Session IV: Imputation in practice (large data sets, hierarchical data, non-linearities, interactions)
+Session V: After imputation, guidelines for analysis and reporting
+
+
+Prerequisites
+
+Basic proficiency in R.
+
+
+Workshop materials
+
+Participants will receive written course notes, computer practicals and computer code.
+
+
+Recommended Texts / Bibliography
+
+Van Buuren, S. and Groothuis-Oudshoorn, C.G.M. (2011). mice: Multivariate Imputation by Chained Equations in R. Journal of Statistical Software, 45(3), 1--67.
+Van Buuren, S. (2012). Flexible Imputation of Missing Data. Chapman & Hall/CRC, Boca Raton, FL. Chapters 1--6, 10.
+
+
+Language of Instruction
+
+English
+
+
+
+Instructor
+
+
+Stef van Buuren
+
+Stef is statistician at Netherlands Organization for Applied Scientific Research TNO in Leiden, and Professor of Missing Data at the University of Utrecht, the Netherlands. Van Buuren pioneered the chained equations approach, and developed of the popular MICE package for creating and analyzing multiple imputations in R.
+

@@ -1,0 +1,121 @@
+---
+title: 'II: Boys data, imputation and nonresponse models'
+author: "Gerko Vink and Stef van Buuren"
+date: '**Practical 2 of 4**'
+output:
+  html_document: default
+  pdf_document: default
+---
+
+This is the second vignette in the Winnipeg series. 
+
+In this vignette we will focus on analyzing the relation between the data and the missingness, and on creating imputations. For non-`R` users: In `R` one can simply call the help function for a any specific function `func` by typing `help(func)`. E.g. `help(mice)` directs you to the help page of the `mice` function.
+
+---
+
+**1. Open `R` and load the packages `mice` and `lattice`. Also, fix the random seed.**
+```{r warning=FALSE, message=FALSE}
+require(mice)
+require(lattice)
+set.seed(123)
+```
+We choose seed value `123`. This is an arbitrary value; any value would be an equally good seed value. Fixing the random seed enables you (and others) to exactly replicate anything that involves random number generators. If you set the seed in your `R` instance to `123`, you will get the exact same results and plots as we present in this document. 
+
+---
+
+**2. The `boys` dataset is part of `mice`. It is a subset of a large Dutch dataset containing growth measures from the Fourth Dutch Growth Study. Inspect the help for `boys` dataset and make yourself familiar with its contents.**
+
+To learn more about the contents of the data, use one of the two following help commands:
+```{r}
+help(boys)
+?boys
+```
+
+---
+
+**3. Get an overview of the data. Find information about the size of the data, the variables measured and the amount of missingness.**
+```{r}
+head(boys)
+nrow(boys)
+summary(boys)
+```
+
+---
+
+**4. As we have seen before, the function `md.pattern()` can be used to display all different missing data patterns. How many different missing data patterns are present in the boys dataframe and which pattern occurs most frequently in the data?**
+```{r}
+md.pattern(boys)
+```
+There are 13 patterns in total, with the pattern where `gen`, `phb` and `tv` are missing occuring the most.
+
+---
+
+**5. How many patterns occur for which the variable `gen` (genital Tannerstage) is missing?**
+```{r}
+mpat <- md.pattern(boys)
+sum(mpat[, "gen"] == 0)
+```
+Answer: 8 patterns (503 cases)
+
+---
+
+**6. Let us focus more precisely on the missing data patterns. Does the missing data of `gen` depend on `age`? One could for example check this by making a histogram of `age` separately for the cases with known genital stages and for cases with missing genital stages.**
+
+To create said histogram in `R`, a missingness indicator for `gen` has to be created. A missingness indicator is a dummy variable with value `1` for observed values (in this case genital status) and `0` for missing values. Create a missingness indicator for `gen` by typing
+```{r}
+R <- is.na(boys$gen) 
+R
+```
+As we can see, the missingness indicator tells us for each value in `gen` whether it is missing (`TRUE`) or observed (`FALSE`).
+
+A histogram can be made with the function `histogram()`.
+```{r}
+histogram(boys$gen)
+```
+
+or, equivalently, one could use
+```{r}
+histogram(~ gen, data = boys)
+```
+
+Writing the latter line of code for plots is more efficient than selecting every part of the `boys` data with the `boys$...` command, especially if plots become more advanced. The code for a conditional histogram of `age` given `R` is
+```{r}
+histogram(~age|R, data=boys)
+```
+
+The histogram shows that the missingness in `gen` is not equally distributed across `age`.
+
+---
+
+**7. Impute the `boys` dataset with mice using all default settings and name the `mids` (multiply imputed data set) object `imp1`.**
+```{r}
+imp1 <- mice(boys, print=FALSE)
+```
+
+---
+
+**8. Compare the means of the imputed data with the means of the incomplete data. One can use the function `complete()` with a `mids`-object as argument to obtain an imputed dataset. As default, the first imputed dataset will be given by this function.**
+```{r}
+summary(boys)
+summary(complete(imp1))
+```
+Most means are roughly equal, except the mean of `tv`, which is much lower in the first imputed data set, when compared to the incomplete data. This makes sense because most genital measures are unobserved for the lower ages. When imputing these values, the means should decrease.
+
+Investigating univariate properties by using functions such as `summary()`, may not be ideal in the case of hundreds of variables. To extract just the information you need, for all imputed datasets, we can make use of the `with()` function. To obtain summaries for each imputed `tv` only, type
+```{r}
+summary(with(imp1, mean(tv)))
+```
+
+
+---
+
+###Conclusion
+We have seen that creating multiple imputations is straightforward with the `R` package `mice`. The package is designed to allow you to assess and control the imputations themselves, and relations between the observed and imputed data. 
+
+It is important to 'gain' this control as a user. After all, we are imputing values and we aim to properly adress the uncertainty about the missingness problem. 
+
+---
+
+**- End of Vignette**
+
+---
