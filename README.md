@@ -17,7 +17,13 @@ Multiple imputation is a principled solution for this problem. The aim of this w
 Contents
 --------
 
-The workshop will consist of 5 sessions, each of which comprises a lecture followed by a computer practical using `R`: 1. Session I: Introduction, issues raised by missing data, and towards a systematic approach 2. Session II: Introduction to multiple imputation 3. Session III: Multivariate missing data (joint model approach, chained equations) 4. Session IV: Imputation in practice (large data sets, hierarchical data, non-linearities, interactions) 5. Session V: After imputation, guidelines for analysis and reporting
+The workshop will consist of 5 sessions, each of which comprises a lecture followed by a computer practical using `R`:
+
+1.  Session I: Introduction, issues raised by missing data, and towards a systematic approach
+2.  Session II: Introduction to multiple imputation
+3.  Session III: Multivariate missing data (joint model approach, chained equations)
+4.  Session IV: Imputation in practice (large data sets, hierarchical data, non-linearities, interactions)
+5.  Session V: After imputation, guidelines for analysis and reporting
 
 How to prepare
 --------------
@@ -43,9 +49,9 @@ install.packages("lattice")
 Workshop materials
 ------------------
 
-1.  [Lectures](Lectures/Winnipeg.pdf)
+1.  [Lectures](https://Lectures/Winnipeg.pdf)
 2.  [Handout](Lectures/WinnipegHandout.pdf)
-3.  [Practical I](Practicals/Practical_I.html)
+3.  [Practical I](https://Practicals/Practical_I.html)
 4.  [Practical II](Practicals/Practical_II.html)
 5.  [Practical III](Practicals/Practical_III.html)
 6.  [Practical IV](Practicals/Practical_IV.html)
