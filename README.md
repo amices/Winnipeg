@@ -49,7 +49,7 @@ install.packages("lattice")
 Workshop materials
 ------------------
 
-1.  [Lectures](https://Lectures/Winnipeg.pdf)
+1.  [Lectures](Lectures/Winnipeg.pdf)
 2.  [Handout](Lectures/WinnipegHandout.pdf)
 3.  [Practical I](https://htmlpreview.github.io/?https://github.com/stefvanbuuren/Winnipeg/blob/master/Practicals/Practical_I.html)
 4.  [Practical II](https://htmlpreview.github.io/?https://github.com/stefvanbuuren/Winnipeg/blob/master/Practicals/Practical_II.html)
