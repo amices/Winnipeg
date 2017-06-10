@@ -22,7 +22,7 @@ set.seed(123)
 
 The number of imputed data sets can be specified by the `m = ...` argument. For example, to create just three imputed data sets, specify
 ```{r, cache=TRUE}
-imp <- mice(nhanes, m = 3, print=F)
+imp <- mice(nhanes, m = 3, print = FALSE)
 ```
 
 ---
@@ -41,7 +41,7 @@ pred
 ```
 The object `pred` contains the predictor matrix from an initial run of `mice` with zero iterations, specified by `maxit = 0`. Altering the predictor matrix and returning it to the mice algorithm is very simple. For example, the following code removes the variable `hyp` from the set of predictors, but still leaves it to be predicted by the other variables.
 ```{r, cache = TRUE}
-pred[ ,"hyp"] <- 0
+pred[, "hyp"] <- 0
 pred
 ```
 Use your new predictor matrix in `mice()` as follows

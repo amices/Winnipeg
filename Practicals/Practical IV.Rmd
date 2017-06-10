@@ -27,7 +27,7 @@ We choose seed value `123`. This is an arbitrary value; any value would be an eq
 
 Remember that we imputed the `boys` data in the previous tutorial with `pmm` and with `norm`. One of the problems with the imputed values of `tv` with `norm` is that there are negative values among the imputations. Somehow we should be able to lay a constraint on the imputed values of `tv`. 
 
-The `mice()` function has an argument called `post` that takes a vector of strings of `R` commands. These commands are parsed and evaluated after the univariate imputation function returns, and thus provides a way of post-processing the imputed values while using the processed version in the imputation algorithm. In other words; the post-processing allows us to manipulate the imputations for a particular variable that are generated within each iteration. Such manipulations directly affect the imputated values of that variable and the imputations for other variables. Naturally, such a procedure should be handled with care. 
+The `mice()` function has an argument called `post` that takes a vector of strings of `R` commands. These commands are parsed and evaluated after the univariate imputation function returns, and thus provides a way of post-processing the imputed values while using the processed version in the imputation algorithm. In other words; the post-processing allows us to manipulate the imputations for a particular variable that are generated within each iteration. Such manipulations directly affect the imputed values of that variable and the imputations for other variables. Naturally, such a procedure should be handled with care. 
 
 ---
 
@@ -158,9 +158,9 @@ All is well now!
 
 **Conclusion**
 
-We have seen that the practical execution of multiple imputation and pooling is straightforward with the `R` package `mice`. The package is designed to allow you to assess and control the imputations themselves, the convergence of the algorithm and the distributions and multivariate relations of the observed and imputed data.
+We have seen that *post-processing* of imputations and *passive imputation* can be used to preserve typical features of the data while maintaining the relations between the variables in both the observed and imputed data.
 
-It is important to ‘gain’ this control as a user. After all, we are imputing values and taking their uncertainty properly into account. Being also uncertain about the process that generated those values is therefor not a valid option.
+It is important to ‘gain’ this control as a user. After all, we are imputing values and taking their uncertainty properly into account.
 
 ---
 

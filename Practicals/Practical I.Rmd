@@ -172,7 +172,7 @@ summary(fit)
 **12. Re-run the stochastic imputation model with seed `123` and verify if your results are the same as the ones below**
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-imp <- mice(nhanes, method = "norm.nob", m = 1, maxit = 1, seed = 123, print=F)
+imp <- mice(nhanes, method = "norm.nob", m = 1, maxit = 1, seed = 123, print = FALSE)
 fit <- with(imp, lm(age ~ bmi))
 summary(fit)
 ```
@@ -196,7 +196,7 @@ where 123 is some arbitrary number that you can choose yourself. Re-running this
 imp <- mice(nhanes)
 imp
 ```
-The imputations are now done. As you can see, the algorithm ran for 5 iterations (the default) and presented us with 5 imputations for each missing datum. For the rest of this document we will omit printing of the iteration cycle when we run `mice`. We do so by adding `print=F` to the `mice` call. 
+The imputations are now done. As you can see, the algorithm ran for 5 iterations (the default) and presented us with 5 imputations for each missing datum. For the rest of this document we will omit printing of the iteration cycle when we run `mice`. We do so by adding `print = FALSE` to the `mice` call. 
 
 The object `imp` contains a multiply imputed data set (of class `mids`). It encapsulates all information from imputing the `nhanes` dataset, such as the original data, the imputed values, the number of missing values, number of iterations, and so on.
 

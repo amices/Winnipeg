@@ -75,12 +75,12 @@ histogram(boys$gen)
 
 or, equivalently, one could use
 ```{r}
-histogram(~ gen, data = boys)
+histogram(~gen, data = boys)
 ```
 
 Writing the latter line of code for plots is more efficient than selecting every part of the `boys` data with the `boys$...` command, especially if plots become more advanced. The code for a conditional histogram of `age` given `R` is
 ```{r}
-histogram(~age|R, data=boys)
+histogram(~age|R, data = boys)
 ```
 
 The histogram shows that the missingness in `gen` is not equally distributed across `age`.
@@ -89,7 +89,7 @@ The histogram shows that the missingness in `gen` is not equally distributed acr
 
 **7. Impute the `boys` dataset with mice using all default settings and name the `mids` (multiply imputed data set) object `imp1`.**
 ```{r}
-imp1 <- mice(boys, print=FALSE)
+imp1 <- mice(boys, print = FALSE)
 ```
 
 ---

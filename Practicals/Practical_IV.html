@@ -134,7 +134,7 @@ set.seed(123)</code></pre>
 <hr />
 <p><strong>Post-proccessing of the imputations</strong></p>
 <p>Remember that we imputed the <code>boys</code> data in the previous tutorial with <code>pmm</code> and with <code>norm</code>. One of the problems with the imputed values of <code>tv</code> with <code>norm</code> is that there are negative values among the imputations. Somehow we should be able to lay a constraint on the imputed values of <code>tv</code>.</p>
-<p>The <code>mice()</code> function has an argument called <code>post</code> that takes a vector of strings of <code>R</code> commands. These commands are parsed and evaluated after the univariate imputation function returns, and thus provides a way of post-processing the imputed values while using the processed version in the imputation algorithm. In other words; the post-processing allows us to manipulate the imputations for a particular variable that are generated within each iteration. Such manipulations directly affect the imputated values of that variable and the imputations for other variables. Naturally, such a procedure should be handled with care.</p>
+<p>The <code>mice()</code> function has an argument called <code>post</code> that takes a vector of strings of <code>R</code> commands. These commands are parsed and evaluated after the univariate imputation function returns, and thus provides a way of post-processing the imputed values while using the processed version in the imputation algorithm. In other words; the post-processing allows us to manipulate the imputations for a particular variable that are generated within each iteration. Such manipulations directly affect the imputed values of that variable and the imputations for other variables. Naturally, such a procedure should be handled with care.</p>
 <hr />
 <p><strong>2. Post-process the values to constrain them between 1 and 25, use <code>norm</code> as the imputation method for <code>tv</code>.</strong></p>
 <pre class="r"><code>ini &lt;- mice(boys, maxit = 0)
@@ -371,8 +371,8 @@ pred</code></pre>
 <p>All is well now!</p>
 <hr />
 <p><strong>Conclusion</strong></p>
-<p>We have seen that the practical execution of multiple imputation and pooling is straightforward with the <code>R</code> package <code>mice</code>. The package is designed to allow you to assess and control the imputations themselves, the convergence of the algorithm and the distributions and multivariate relations of the observed and imputed data.</p>
-<p>It is important to ‘gain’ this control as a user. After all, we are imputing values and taking their uncertainty properly into account. Being also uncertain about the process that generated those values is therefor not a valid option.</p>
+<p>We have seen that <em>post-processing</em> of imputations and <em>passive imputation</em> can be used to preserve typical features of the data while maintaining the relations between the variables in both the observed and imputed data.</p>
+<p>It is important to ‘gain’ this control as a user. After all, we are imputing values and taking their uncertainty properly into account.</p>
 <hr />
 <p><strong>For fun: what you shouldn’t do with passive imputation</strong></p>
 <p>Never set all relations fixed. You will remain with the starting values and waste your computer’s energy (and your own).</p>

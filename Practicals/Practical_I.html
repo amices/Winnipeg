@@ -492,7 +492,7 @@ summary(fit)</code></pre>
 ## hyp   1   1   0   1
 ## chl   1   1   1   0
 ## Random generator seed value:  NA</code></pre>
-<p>The imputations are now done. As you can see, the algorithm ran for 5 iterations (the default) and presented us with 5 imputations for each missing datum. For the rest of this document we will omit printing of the iteration cycle when we run <code>mice</code>. We do so by adding <code>print=F</code> to the <code>mice</code> call.</p>
+<p>The imputations are now done. As you can see, the algorithm ran for 5 iterations (the default) and presented us with 5 imputations for each missing datum. For the rest of this document we will omit printing of the iteration cycle when we run <code>mice</code>. We do so by adding <code>print = FALSE</code> to the <code>mice</code> call.</p>
 <p>The object <code>imp</code> contains a multiply imputed data set (of class <code>mids</code>). It encapsulates all information from imputing the <code>nhanes</code> dataset, such as the original data, the imputed values, the number of missing values, number of iterations, and so on.</p>
 <p>To obtain an overview of the information stored in the object <code>imp</code>, use the <code>attributes()</code> function:</p>
 <pre class="r"><code>attributes(imp)</code></pre>
