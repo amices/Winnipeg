@@ -46,7 +46,7 @@ install.packages("lattice")
 
 ------------------------------------------------------------------------
 
-The site is [here](stefvanbuuren.github.io/Winnipeg/)
+The site is [here](https://stefvanbuuren.github.io/Winnipeg/)
 
 Workshop materials
 ------------------
