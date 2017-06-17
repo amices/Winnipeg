@@ -44,7 +44,7 @@ Please remember to bring your own laptop computer and make sure that you have wr
 
 1. Download and install the latest version of `R` from [the R-Project website](https://cloud.r-project.org)
 2. Download and install the most recent version of `RStudio Desktop (Free License)` from [RStudio's website](https://www.rstudio.com/products/rstudio/download3/). This is not necessary, per se, but it is highly recommended as `RStudio` delivers a tremendous improvement to the user experience of base `R`.
-3. Install the following packages: [`mice`](https://cran.r-project.org/web/packages/mice/index.html), [`lattice`](https://cran.r-project.org/web/packages/lattice/index.html),
+3. Install the following packages: [`mice`](https://cran.r-project.org/web/packages/mice/index.html), and [`lattice`](https://cran.r-project.org/web/packages/lattice/index.html)
 
   - You can simply install packages from within `RStudio` by navigating to `Tools > Install Packages` in the upper menu and entering `mice, lattice` into the `Packages` field. Make sure that the button `Install dependencies` is selected. Once done, click `Install` and you're all set.
   - Or, from within `R` or `RStudio`, copy, paste and enter the following code in the console window (by default the top-right window in `RStudio` / the only window in `R`):
