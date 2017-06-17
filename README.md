@@ -1,11 +1,11 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Winnipeg workshop: Handling missing data in `R` with `mice`
-===========================================================
+[Winnipeg workshop: Handling missing data in `R` with `mice`](https://stefvanbuuren.github.io/Winnipeg/)
+========================================================================================================
 
 Overview
 --------
 
-This repository contains materials for the Biostatistics Workshop *Handling missing data in `R` with `mice`* the 45th Annual Meeting of the Statistical Society of Canada, dated Sunday, June 11, 2017, located in Winnipeg E3 - 270 (EITC).
+This site contains materials for the Biostatistics Workshop *Handling missing data in `R` with `mice`* the 45th Annual Meeting of the Statistical Society of Canada, dated Sunday, June 11, 2017, located in Winnipeg E3 - 270 (EITC).
 
 Motivation
 ----------
@@ -45,8 +45,6 @@ install.packages("lattice")
 ```
 
 ------------------------------------------------------------------------
-
-The site is [here](https://stefvanbuuren.github.io/Winnipeg/)
 
 Workshop materials
 ------------------
