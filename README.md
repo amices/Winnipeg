@@ -46,12 +46,14 @@ install.packages("lattice")
 
 ------------------------------------------------------------------------
 
+The site is [here](stefvanbuuren.github.io/Winnipeg/)
+
 Workshop materials
 ------------------
 
 1.  [Lectures](Lectures/Winnipeg.pdf)
 2.  [Handout](Lectures/WinnipegHandout.pdf)
-3.  [Practical I](https://htmlpreview.github.io/?https://github.com/stefvanbuuren/Winnipeg/blob/master/Practicals/Practical_I.html)
-4.  [Practical II](https://htmlpreview.github.io/?https://github.com/stefvanbuuren/Winnipeg/blob/master/Practicals/Practical_II.html)
-5.  [Practical III](https://htmlpreview.github.io/?https://github.com/stefvanbuuren/Winnipeg/blob/master/Practicals/Practical_III.html)
-6.  [Practical IV](https://htmlpreview.github.io/?https://github.com/stefvanbuuren/Winnipeg/blob/master/Practicals/Practical_IV.html)
+3.  [Practical I](Practicals/Practical_I.html)
+4.  [Practical II](Practicals/Practical_II.html)
+5.  [Practical III](Practicals/Practical_III.html)
+6.  [Practical IV](Practicals/Practical_IV.html)
