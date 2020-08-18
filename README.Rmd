@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# [Winnipeg workshop: Handling missing data in `R` with `mice`](https://stefvanbuuren.github.io/Winnipeg/)
+# [Winnipeg workshop: Handling missing data in `R` with `mice`](http://amices.github.io/Winnipeg/)
 
 ## Overview
 
